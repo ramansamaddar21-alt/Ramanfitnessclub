@@ -18,6 +18,16 @@ export default function RegisterPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     
+    // Track registration event with Meta Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead', {
+        content_name: 'Workshop Registration',
+        content_category: 'Fitness',
+        value: 3499,
+        currency: 'INR'
+      })
+    }
+    
     // Create WhatsApp message with form data
     const message = `Hi! I want to register for the 15 Days 365 Ways Workshop.
 
