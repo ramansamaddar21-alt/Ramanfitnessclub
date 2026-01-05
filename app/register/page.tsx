@@ -56,16 +56,7 @@ I'm ready to start my transformation journey!`
           <Link href="/" className="back-link">
             ← Back to Home
           </Link>
-          <div className="header-content">
-            <Image
-              src="/logo.png"
-              alt="Raman Fitness Club Logo"
-              width={60}
-              height={60}
-              className="header-logo"
-            />
-            <h1 className="brand-title">RAMAN FITNESS CLUB</h1>
-          </div>
+          <h1 className="brand-title">RAMAN FITNESS CLUB</h1>
         </div>
       </header>
 

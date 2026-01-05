@@ -17,17 +17,6 @@ export default function Home() {
       <section className="hero-section slide-center">
         <div className="workshop-container">
           <div className="content-wrapper">
-            <div className="logo-container">
-              <Image
-                src="/logo.png"
-                alt="Raman Fitness Club Logo"
-                width={120}
-                height={120}
-                className="site-logo"
-                priority
-              />
-            </div>
-            
             <div className="brand-name">
               <h3>RAMAN FITNESS CLUB</h3>
             </div>
