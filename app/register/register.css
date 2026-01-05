@@ -1,0 +1,403 @@
+/* Register Page Styles */
+.register-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.register-header {
+  background: rgba(245, 197, 75, 0.05);
+  padding: 1.5rem 0;
+  border-bottom: 2px solid rgba(245, 197, 75, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  font-family: var(--font-main);
+}
+
+.back-link:hover {
+  color: var(--cta);
+  transform: translateX(-5px);
+}
+
+.brand-title {
+  font-size: 2rem;
+  color: var(--title);
+  font-family: var(--font-heading);
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
+.registration-main {
+  padding: 3rem 0;
+}
+
+.registration-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.registration-left {
+  position: sticky;
+  top: 120px;
+}
+
+.register-title {
+  font-size: 2.5rem;
+  color: var(--title);
+  font-family: var(--font-heading);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.register-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-family: var(--font-main);
+}
+
+.price-box {
+  background: linear-gradient(135deg, rgba(245, 197, 75, 0.15), rgba(244, 226, 199, 0.05));
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.price-amount {
+  font-size: 3.5rem;
+  color: var(--cta);
+  font-weight: 900;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.price-features {
+  border-top: 1px solid rgba(245, 197, 75, 0.3);
+  padding-top: 1rem;
+}
+
+.feature-item {
+  color: var(--text);
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  font-family: var(--font-main);
+}
+
+.trainers-preview {
+  background: rgba(245, 197, 75, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(245, 197, 75, 0.2);
+}
+
+.trainers-preview h3 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.trainer-mini {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.trainer-mini-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.trainer-mini strong {
+  display: block;
+  color: var(--title);
+  font-size: 1rem;
+  font-family: var(--font-main);
+}
+
+.trainer-mini p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.registration-right {
+  background: rgba(245, 197, 75, 0.05);
+  border-radius: 16px;
+  border: 2px solid rgba(245, 197, 75, 0.2);
+  overflow: hidden;
+}
+
+.form-container {
+  padding: 2.5rem;
+}
+
+.form-container h3 {
+  font-size: 2rem;
+  color: var(--title);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+}
+
+.form-subtitle {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  border: 2px solid rgba(245, 197, 75, 0.3);
+  border-radius: 6px;
+  background: rgba(245, 197, 75, 0.05);
+  color: var(--text);
+  font-family: var(--font-main);
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(245, 197, 75, 0.1);
+}
+
+.form-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .registration-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .registration-left {
+    position: static;
+  }
+
+  .price-amount {
+    font-size: 2.5rem;
+  }
+
+  .register-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .price-box {
+    padding: 1.5rem;
+  }
+
+  .price-amount {
+    font-size: 2rem;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* WhatsApp Integration Styles */
+.payment-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(245, 197, 75, 0.5), transparent);
+}
+
+.divider-text {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+}
+
+.whatsapp-btn {
+  background: #25D366 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.whatsapp-btn:hover::before {
+  left: 100%;
+}
+
+.whatsapp-btn:hover {
+  background: #20BA5A !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.whatsapp-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.whatsapp-note::before {
+  content: '💬';
+  font-size: 1rem;
+}
+
+/* Mobile optimizations for WhatsApp button */
+@media (max-width: 600px) {
+  .payment-divider {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .divider-line {
+    width: 100%;
+    height: 1px;
+  }
+
+  .divider-text {
+    font-size: 0.8rem;
+  }
+
+  .whatsapp-btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .whatsapp-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Header Logo Styles */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(245, 197, 75, 0.3);
+  transition: all 0.3s ease;
+  background: #000;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(245, 197, 75, 0.5);
+}
+
+.brand-title {
+  margin: 0;
+}
+
+/* Mobile header logo */
+@media (max-width: 600px) {
+  .header-logo {
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+  }
+
+  .header-content {
+    gap: 0.7rem;
+  }
+
+  .brand-title {
+    font-size: 1.5rem;
+  }
+}
